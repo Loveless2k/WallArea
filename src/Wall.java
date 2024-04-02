@@ -19,11 +19,7 @@ public class Wall {
     }
 
     public void setWidth(double width) {
-        if (width < 0){
-            this.width = 0;
-        } else{
-            this.width = width;
-        }
+        this.width = Math.max(width, 0);
     }
 
     public double getHeight() {
@@ -31,10 +27,6 @@ public class Wall {
     }
 
     public void setHeight(double height) {
-        if (height < 0){
-            this.height = 0;
-        } else {
-            this.height = height;
-        }
+        this.height = Math.max(height, 0);
     }
 }
