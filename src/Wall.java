@@ -6,14 +6,8 @@ public class Wall {
     }
 
     public Wall(double width, double height) {
-        if (width < 0){
-            this.width = 0;
-        } else if (height < 0){
-            this.height = 0;
-        } else {
-            this.width = width;
-            this.height = height;
-        }
+        this.width = Math.max(width, 0); // Utiliza Math.max para garantizar un valor no negativo.
+        this.height = Math.max(height, 0); // Aplica el mismo principio para la altura.
     }
 
     public double getArea(){
