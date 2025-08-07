@@ -173,4 +173,89 @@ section::after {
         display: block;
         margin: 0 auto 20px auto;
     }
+
+    /* Stack character profiles on mobile */
+    #character-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Navigation Bar --- */
+nav {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(10, 10, 30, 0.9);
+    border-radius: 5px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #c0c0c0; /* Silver */
+    font-family: 'Cinzel', serif;
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 215, 0, 0.2); /* Faint gold */
+    color: #ffd700; /* Gold */
+}
+
+nav ul li a.active {
+    background-color: rgba(255, 215, 0, 0.8);
+    color: #0a0a1a; /* Dark blue */
+    cursor: default;
+}
+
+/* --- Character Profiles --- */
+#character-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.character-profile {
+    background-color: rgba(0, 0, 10, 0.6);
+    border: 1px solid #c0c0c0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.character-profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.character-profile img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ffd700;
+    margin-bottom: 15px;
+    background-color: #333; /* Placeholder color */
+}
+
+.character-profile h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8em;
+    color: #ffd700;
+    margin-bottom: 10px;
 }
