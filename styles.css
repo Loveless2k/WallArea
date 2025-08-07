@@ -139,3 +139,38 @@ section::after {
         box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
     }
 }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    /* Adjust container padding */
+    .container {
+        padding: 15px;
+    }
+
+    /* Reduce heading font sizes */
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+
+    /* Adjust main content padding */
+    main {
+        padding: 0 10px;
+    }
+
+    /* Adjust section padding */
+    section {
+        padding: 15px;
+    }
+
+    /* Un-float and center the section image */
+    .section-image {
+        float: none;
+        max-width: 80%;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+}
