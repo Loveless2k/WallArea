@@ -21,8 +21,9 @@ body {
     padding: 20px;
     background-color: rgba(10, 10, 30, 0.8); /* Semi-transparent dark blue */
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Gold shadow */
     border: 1px solid rgba(255, 215, 0, 0.7); /* Gold border */
+    /* ANIMATIONS ADDED */
+    animation: fadeIn 1s ease-out, glow 4s infinite linear;
 }
 
 /* Header Styles */
@@ -48,6 +49,15 @@ main {
 
 section {
     margin-bottom: 30px;
+    /* TRANSITIONS ADDED */
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(192, 192, 192, 0.3);
 }
 
 section h2 {
@@ -56,6 +66,13 @@ section h2 {
     color: #c0c0c0; /* Silver */
     border-bottom: 1px solid #c0c0c0;
     padding-bottom: 10px;
+    /* TRANSITION ADDED */
+    transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+section h2:hover {
+    color: #ffd700; /* Gold */
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
 }
 
 section p {
@@ -95,4 +112,30 @@ section::after {
     content: "";
     display: table;
     clear: both;
+}
+
+/* --- Animations and Transitions --- */
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 100, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
 }
